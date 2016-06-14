@@ -113,20 +113,20 @@
 		}
 
 	}
-	canvas.addEventListener("touchstart", function(e) {
+	canvas.addEventListener("touchmove", function(e) {
 		mx = e.pageX - canvas.offsetLeft;
 		my = e.pageY - canvas.offsetTop;
 	}, false)
 
-//	canvas.addEventListener("touchmove", function(e) {
-//		e.preventDefault();
-//		mousedown = true;
-//	})
-//
-//	canvas.addEventListener("touchend", function(e) {
-//		e.preventDefault();
-//		mousedown = false;
-//	})
+	canvas.addEventListener("touchstart", function(e) {
+		e.preventDefault();
+		ontouchstart = true;
+	})
+
+	canvas.addEventListener("touchend", function(e) {
+		e.preventDefault();
+		ontouchstart = false;
+	})
 	window.onload = loop;
 	</script>
 </body>
