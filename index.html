@@ -284,12 +284,12 @@
 		// toggle mousedown state and prevent canvas from being selected
 		canvas.addEventListener( 'touchstart', function( e ) {
 			e.preventDefault();
-			touchstart = true;
+			mousedown = true;
 		});
 
 		canvas.addEventListener( 'touchend', function( e ) {
 			e.preventDefault();
-			touchstart = false;
+			mousedown = false;
 		});
 
 		// once the window loads, we are ready for some fireworks!
